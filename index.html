@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- CONTENEDOR DE PARTÍCULAS -->
+  <div id="particles"></div>
+
+  <!-- MENÚ PRINCIPAL -->
+  <div id="main-menu" class="menu">
+    <div class="menu-content">
+      <h1>Memory Game Pro</h1>
+
+      <label class="menu-label">
+        Dificultad:
+        <select id="menu-difficulty">
+          <option value="4">4x4</option>
+          <option value="6">6x6</option>
+          <option value="8">8x8</option>
+        </select>
+      </label>
+
+      <div class="menu-records">
+        <p>Mejor tiempo: <strong id="menu-best-time">--</strong></p>
+        <p>Mejor movimientos: <strong id="menu-best-moves">--</strong></p>
+      </div>
+
+      <button id="menu-start">Jugar</button>
+    </div>
+  </div>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    <h1>Memory Game Pro</h1>
+    <button id="toggle-theme">Modo oscuro</button>
+  </div>
+
+  <!-- CONTROLES -->
+  <div class="controls">
+    <label>
+      Dificultad:
+      <select id="difficulty">
+        <option value="4">4x4</option>
+        <option value="6">6x6</option>
+        <option value="8">8x8</option>
+      </select>
+    </label>
+
+    <button id="start">Nuevo juego</button>
+
+    <div class="stats">
+      <span>Movimientos: <strong id="moves">0</strong></span>
+      <span>Tiempo: <strong id="time">00:00</strong></span>
+      <span>Mejor tiempo: <strong id="best-time">--</strong></span>
+      <span>Mejor movimientos: <strong id="best-moves">--</strong></span>
+    </div>
+  </div>
+
+  <!-- TABLERO -->
+  <div id="game" class="game"></div>
+
+  <!-- PANTALLA DE VICTORIA -->
+  <div id="victory" class="victory hidden">
+    <div class="victory-content">
+      <h2>¡Victoria! 🎉</h2>
+
+      <div class="victory-stats">
+        <p>Tiempo total: <strong id="final-time"></strong></p>
+        <p>Movimientos: <strong id="final-moves"></strong></p>
+        <p>Mejor tiempo: <strong id="victory-best-time"></strong></p>
+        <p>Mejor movimientos: <strong id="victory-best-moves"></strong></p>
+      </div>
+
+      <button id="victory-menu">Volver al menú</button>
+      <button id="victory-restart">Jugar otra vez</button>
+    </div>
+  </div>
+
+  <!-- SONIDOS -->
+  <audio id="sound-match" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+  <audio id="sound-fail" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+  <audio id="sound-win" src="https://actions.google.com/sounds/v1/cartoon/slide_whistle_to_drum_hit.ogg"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
